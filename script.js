@@ -7,9 +7,9 @@ fetch(jsonLink)
         console.log(' :', data);
         // Etape 2 : Faire la section héro, avec un h1, p pour le slogan, un bouton pour l'appelAction
         //cibler ma section
+        let containerHero = document.getElementById("hero");
 
         // creer un titre
-        let containerHero = document.getElementById("hero");
         let heroTitle = document.createElement("h1");
         heroTitle.textContent = data.nomCommercial;
         // les inserer dans la section
@@ -81,8 +81,8 @@ fetch(jsonLink)
             cardServ.appendChild(imageCard);
 
         });
-        serviceSection.appendChild(servicesContainer);
         // l'inserer dans la section
+        serviceSection.appendChild(servicesContainer);
 
         // Etape 5 : faire la section Temoignages
         // cibler la section service
@@ -113,6 +113,10 @@ fetch(jsonLink)
             let commentTem = document.createElement("p");
             commentTem.textContent = elementTem.commentaire;
             cardTem.appendChild(commentTem);
+
+            let noteTem = document.createElement("h4");
+            noteTem.textContent = "Notes : " + " " + elementTem.note;
+            cardTem.appendChild(noteTem);
 
         });
 
