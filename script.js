@@ -1,5 +1,3 @@
-const { createElement } = require("react");
-
 // Etape 1:Recuperer le lien de fetch
 const jsonLink = "https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.gitlab.io/json/plombier-a-velo.json";
 
@@ -31,15 +29,29 @@ fetch(jsonLink)
 
         // Etape 3 : Faire la section avantages: cibler la section avantage, creer une div carte, faire un boucle avec forEach
         let avantageSection = document.getElementById("avantages");
-        // faire le h2 et l'inserer
+        // creer h2 et l'inserer dans la section
         let titleAv = document.createElement("h2");
-        titleAv.textContent = "Avantages Clients"
-        let card = document.createElement("div");
-        card.textContent = data.avantagesClients;
+        titleAv.textContent = "Avantages Clients";
+
+        avantageSection.appendChild(titleAv);
+
+        // // creer p et l'inserer dans la section
+        // let pAv = document.createElement("p");
+
+        // // creer carte d'avantages, faire un boucle forEach et l'inserer dans la section
+
+        let cardsContainer = document.createElement("div");
+        cardsContainer.classList.add("cardsContainerFlex");
+
+        
         data.avantagesClients.forEach(elementAv => {
-            return;
+            let card = document.createElement("div");
+            card.textContent = elementAv;
+            cardsContainer.appendChild(card);
         });
-        avantageSection.appendChild(card);
+        avantageSection.appendChild(cardsContainer);
+
+
 
 
     })
