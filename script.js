@@ -85,6 +85,39 @@ fetch(jsonLink)
         // l'inserer dans la section
 
         // Etape 5 : faire la section Temoignages
-        // creer carte d'avantages, faire un boucle forEach et l'inserer dans la section
+        // cibler la section service
+        let temoignagesSection = document.getElementById("temoignages");
+
+        // creer h2 et l'inserer dans la section
+        let titleTem = document.createElement("h2");
+        titleTem.textContent = "Temoignages";
+        temoignagesSection.appendChild(titleTem);
+
+        // creer carte de temoignages
+        let temoignagesContainer = document.createElement("div");
+        temoignagesContainer.classList.add("cardsContainerFlex");
+
+        // faire un boucle forEach
+        data.temoignages.forEach(elementTem => {
+            let cardTem = document.createElement("div");
+            temoignagesContainer.appendChild(cardTem);
+
+            let titleCardTem = document.createElement("h3");
+            titleCardTem.textContent = elementTem.prenom;
+            cardTem.appendChild(titleCardTem);
+
+            let descCardTem = document.createElement("p");
+            descCardTem.textContent = elementTem.typeIntervention;
+            cardTem.appendChild(descCardTem);
+
+            let commentTem = document.createElement("p");
+            commentTem.textContent = elementTem.commentaire;
+            cardTem.appendChild(commentTem);
+
+        });
+
+        // l'inserer dans la section
+        temoignagesSection.appendChild(temoignagesContainer);
+
 
     })
