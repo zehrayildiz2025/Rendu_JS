@@ -8,21 +8,25 @@ fetch(jsonLink)
         // Etape 2 : Faire la section héro, avec un h1, p pour le slogan, un bouton pour l'appelAction
         //cibler ma section
         let containerHero = document.getElementById("hero");
+        // containerHero.classList.add("contHero");
 
         // creer un titre
         let heroTitle = document.createElement("h1");
+        heroTitle.classList.add("heroTitle");
         heroTitle.textContent = data.nomCommercial;
         // les inserer dans la section
         containerHero.appendChild(heroTitle);
 
         // creer un slogan p
         let slogan = document.createElement("p");
+        slogan.classList.add("slogan");
         slogan.textContent = data.phraseAccroche;
         // les inserer dans la section
         containerHero.appendChild(slogan);
 
         // creer un bouton
         let boutonHero = document.createElement("button");
+        boutonHero.classList.add("boutonHero");
         boutonHero.textContent = data.texteAppelAction;
         // les inserer dans la section
         containerHero.appendChild(boutonHero);
