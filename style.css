@@ -1,0 +1,9 @@
+
+.container{
+    width: 900px;
+    margin: auto;
+}
+.flex{
+    display: flex;
+    gap: 30px;
+}
