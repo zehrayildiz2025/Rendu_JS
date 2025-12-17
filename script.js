@@ -1,12 +1,13 @@
-// Etape 1:Recuperer le lien de fetch
+// Etape 1:Recuperer le lien de json pour fetch
+
 const jsonLink = "https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.gitlab.io/json/plombier-a-velo.json";
 
 fetch(jsonLink)
     .then(response => response.json())
     .then(data => {
-        console.log(' :', data);
 
-        // Etape 2 : Faire la section Héro
+        // Etape 2 : Faire la section hero
+
         let containerHero = document.getElementById("hero");
         // containerHero.classList.add("hero");
 
@@ -33,6 +34,7 @@ fetch(jsonLink)
 
 
         // Etape 3 : Faire la section avantages: cibler la section avantage, creer une div carte, faire un boucle avec forEach
+
         let avantageSection = document.getElementById("avantages");
 
         // creer h2 et l'inserer dans la section
@@ -59,6 +61,7 @@ fetch(jsonLink)
 
 
         // Etape 4 : faire la section Service 
+
         // cibler la section service
         let serviceSection = document.getElementById("services");
 
@@ -93,13 +96,13 @@ fetch(jsonLink)
             descCard.textContent = elementServ.description;
             cardServ.appendChild(descCard);
 
-
         });
         // l'inserer dans la section
         serviceSection.appendChild(servicesContainer);
 
 
         // Etape 5 : faire la section Temoignages
+
         // cibler la section service
         let temoignagesSection = document.getElementById("temoignages");
 

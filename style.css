@@ -78,6 +78,7 @@ nav {
     border-radius: 5px;
     border: none;
     padding: 20px;
+    font-family: "Expletus Sans", sans-serif;
 }
 
 /* les titres en generale */
@@ -141,6 +142,11 @@ nav {
 footer {
     border-top: 1px solid;
     margin-top: 20vh;
+    color: #303940;
+
+    a {
+        color: #303940;
+    }
 }
 
 #copyright {
@@ -158,10 +164,6 @@ footer {
     padding: 30px;
     font-weight: bold;
     color: #303940;
-
-    a {
-        color: #303940;
-    }
 
     ul {
         gap: 20px;
