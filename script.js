@@ -34,7 +34,6 @@ fetch(jsonLink)
 
         // Etape 3 : Faire la section avantages: cibler la section avantage, creer une div carte, faire un boucle avec forEach
         let avantageSection = document.getElementById("avantages");
-        // avantageSection.classList.add("avSection");
 
         // creer h2 et l'inserer dans la section
         let titleAv = document.createElement("h2");
@@ -50,8 +49,8 @@ fetch(jsonLink)
 
         // faire un boucle forEach
         data.avantagesClients.forEach(elementAv => {
-            let card = document.createElement("div");
-            card.classList.add("carteAv");
+            let card = document.createElement("p");
+            card.classList.add("carte");
             card.textContent = elementAv;
             cardsContainer.appendChild(card);
         });
@@ -76,8 +75,14 @@ fetch(jsonLink)
 
         // faire un boucle forEach
         data.services.forEach(elementServ => {
+
             let cardServ = document.createElement("div");
-            cardServ.classList.add("carteServ");
+            cardServ.classList.add("carte");
+
+            let imageCard = document.createElement("img");
+            imageCard.classList.add("imgServ");
+            imageCard.src = elementServ["image-url"];
+            cardServ.appendChild(imageCard);
             servicesContainer.appendChild(cardServ);
             let titleCard = document.createElement("h3");
             titleCard.textContent = elementServ.nom;
@@ -87,10 +92,6 @@ fetch(jsonLink)
             descCard.textContent = elementServ.description;
             cardServ.appendChild(descCard);
 
-            let imageCard = document.createElement("img");
-            imageCard.classList.add("imgServ");
-            imageCard.src = elementServ["image-url"];
-            cardServ.appendChild(imageCard);
 
         });
         // l'inserer dans la section
@@ -115,7 +116,7 @@ fetch(jsonLink)
         // faire un boucle forEach
         data.temoignages.forEach(elementTem => {
             let cardTem = document.createElement("div");
-            cardTem.classList.add("carteTem");
+            cardTem.classList.add("carte");
             temoignagesContainer.appendChild(cardTem);
 
             let titleCardTem = document.createElement("h3");
