@@ -72,7 +72,7 @@ nav {
     font-size: 25px;
 }
 
-.boutonHero {
+.bouton {
     background-color: rgb(255, 255, 255);
     color: #303940;
     border-radius: 5px;
@@ -84,6 +84,14 @@ nav {
 .titles {
     text-align: center;
     padding: 35px;
+    color: #303940;
+}
+
+.titleCard {
+    color: #303940;
+}
+
+.noteTem {
     color: #303940;
 }
 
@@ -103,8 +111,6 @@ nav {
 #avantages {
     height: 250px;
     width: 100%;
-
-    */
 }
 
 /* style cartes generales */
@@ -126,31 +132,38 @@ nav {
 }
 
 /* footer section */
+footer {
+    border-top: 1px solid;
+    margin-top: 35px;
+}
+
 #copyright {
     justify-content: center;
 }
 
-#listFooter {
+.listFooter {
     display: flex;
     justify-content: space-between;
     padding: 30px;
     font-weight: bold;
     color: #303940;
-    border-top: 1px solid;
-    margin-top: 35px;
-
+ 
     a {
-        color: rgb(24, 23, 23);
+        color: #303940;
     }
 
     ul {
-        display: flex;
-        justify-content: left;
+        /* display: flex;
+        flex: flex-end; */
         gap: 20px;
         padding-right: 12px;
         list-style: none;
+        color: #303940;
     }
 }
+
+
+
 
 /* section temoignages
 .carteTem {

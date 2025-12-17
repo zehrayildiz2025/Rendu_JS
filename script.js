@@ -26,7 +26,7 @@ fetch(jsonLink)
 
         // creer un bouton
         let boutonHero = document.createElement("button");
-        boutonHero.classList.add("boutonHero");
+        boutonHero.classList.add("bouton");
         boutonHero.textContent = data.texteAppelAction;
         // les inserer dans la section
         containerHero.appendChild(boutonHero);
@@ -85,6 +85,7 @@ fetch(jsonLink)
             cardServ.appendChild(imageCard);
             servicesContainer.appendChild(cardServ);
             let titleCard = document.createElement("h3");
+            titleCard.classList.add("titleCard");
             titleCard.textContent = elementServ.nom;
             cardServ.appendChild(titleCard);
 
@@ -120,6 +121,7 @@ fetch(jsonLink)
             temoignagesContainer.appendChild(cardTem);
 
             let titleCardTem = document.createElement("h3");
+            titleCardTem.classList.add("titleCard");
             titleCardTem.textContent = elementTem.prenom;
             cardTem.appendChild(titleCardTem);
 
@@ -132,6 +134,7 @@ fetch(jsonLink)
             cardTem.appendChild(commentTem);
 
             let noteTem = document.createElement("h4");
+            noteTem.classList.add("noteTem");
             noteTem.textContent = "Notes : " + " " + elementTem.note;
             cardTem.appendChild(noteTem);
 
