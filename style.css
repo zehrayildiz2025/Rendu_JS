@@ -88,6 +88,7 @@ nav {
 }
 
 .titleCard {
+    margin: 0px 0px 10px;
     color: #303940;
 }
 
@@ -113,6 +114,11 @@ nav {
     width: 100%;
 }
 
+/* section temoignages */
+.temCont {
+    box-shadow: 0px 0px 8px rgba(184, 171, 171, 0.893);
+}
+
 /* style cartes generales */
 .carte {
     /* box-shadow: 0px 0px 8px rgba(184, 171, 171, 0.893); */
@@ -134,11 +140,16 @@ nav {
 /* footer section */
 footer {
     border-top: 1px solid;
-    margin-top: 35px;
+    margin-top: 20vh;
 }
 
 #copyright {
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+#bottomLinks {
+    display: flex;
 }
 
 .listFooter {
@@ -147,37 +158,15 @@ footer {
     padding: 30px;
     font-weight: bold;
     color: #303940;
- 
+
     a {
         color: #303940;
     }
 
     ul {
-        /* display: flex;
-        flex: flex-end; */
         gap: 20px;
         padding-right: 12px;
         list-style: none;
         color: #303940;
     }
 }
-
-
-
-
-/* section temoignages
-.carteTem {
-    box-shadow: 0px 0px 15px rgba(184, 171, 171, 0.893);
-    width: 20%;
-    /* border-radius: 13px; */
-/* background-color: rgba(255, 255, 156, 0.523);
-    padding: 15px;
-    margin: 0px 15px 0px 15px;
-} */
-/* .carteAv {
-        border: 2px solid rgb(90, 83, 83);
-        box-shadow: inset;
-        width: 20%;
-        font-size: 20px;
-        text-align: center;
-    }

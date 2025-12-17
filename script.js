@@ -62,16 +62,15 @@ fetch(jsonLink)
         // cibler la section service
         let serviceSection = document.getElementById("services");
 
+        // creer carte de services
+        let servicesContainer = document.createElement("div");
+        servicesContainer.classList.add("cardsContainerFlex");
 
         // creer h2 et l'inserer dans la section
         let titleServ = document.createElement("h2");
         titleServ.classList.add("titles");
         titleServ.textContent = "Services";
         serviceSection.appendChild(titleServ);
-
-        // creer carte de services
-        let servicesContainer = document.createElement("div");
-        servicesContainer.classList.add("cardsContainerFlex");
 
         // faire un boucle forEach
         data.services.forEach(elementServ => {
@@ -84,6 +83,7 @@ fetch(jsonLink)
             imageCard.src = elementServ["image-url"];
             cardServ.appendChild(imageCard);
             servicesContainer.appendChild(cardServ);
+
             let titleCard = document.createElement("h3");
             titleCard.classList.add("titleCard");
             titleCard.textContent = elementServ.nom;
@@ -118,6 +118,7 @@ fetch(jsonLink)
         data.temoignages.forEach(elementTem => {
             let cardTem = document.createElement("div");
             cardTem.classList.add("carte");
+            temoignagesContainer.classList.add("temCont");
             temoignagesContainer.appendChild(cardTem);
 
             let titleCardTem = document.createElement("h3");
