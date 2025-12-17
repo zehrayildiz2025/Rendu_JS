@@ -5,10 +5,10 @@ fetch(jsonLink)
     .then(response => response.json())
     .then(data => {
         console.log(' :', data);
-        // Etape 2 : Faire la section héro, avec un h1, p pour le slogan, un bouton pour l'appelAction
-        //cibler ma section
+
+        // Etape 2 : Faire la section Héro
         let containerHero = document.getElementById("hero");
-        // containerHero.classList.add("contHero");
+        // containerHero.classList.add("hero");
 
         // creer un titre
         let heroTitle = document.createElement("h1");
@@ -31,10 +31,13 @@ fetch(jsonLink)
         // les inserer dans la section
         containerHero.appendChild(boutonHero);
 
+
         // Etape 3 : Faire la section avantages: cibler la section avantage, creer une div carte, faire un boucle avec forEach
         let avantageSection = document.getElementById("avantages");
+
         // creer h2 et l'inserer dans la section
         let titleAv = document.createElement("h2");
+        titleAv.classList.add("titles");
         titleAv.textContent = "Avantages Clients";
         // l'inserer dans la section
         avantageSection.appendChild(titleAv);
@@ -47,18 +50,22 @@ fetch(jsonLink)
         // faire un boucle forEach
         data.avantagesClients.forEach(elementAv => {
             let card = document.createElement("div");
+            card.classList.add("carteAv");
             card.textContent = elementAv;
             cardsContainer.appendChild(card);
         });
-
         // l'inserer dans la section
         avantageSection.appendChild(cardsContainer);
+
 
         // Etape 4 : faire la section Service 
         // cibler la section service
         let serviceSection = document.getElementById("services");
+
+
         // creer h2 et l'inserer dans la section
         let titleServ = document.createElement("h2");
+        titleServ.classList.add("titles");
         titleServ.textContent = "Services";
         serviceSection.appendChild(titleServ);
 
@@ -69,7 +76,7 @@ fetch(jsonLink)
         // faire un boucle forEach
         data.services.forEach(elementServ => {
             let cardServ = document.createElement("div");
-
+            cardServ.classList.add("carteServ");
             servicesContainer.appendChild(cardServ);
             let titleCard = document.createElement("h3");
             titleCard.textContent = elementServ.nom;
@@ -88,12 +95,15 @@ fetch(jsonLink)
         // l'inserer dans la section
         serviceSection.appendChild(servicesContainer);
 
+
         // Etape 5 : faire la section Temoignages
         // cibler la section service
         let temoignagesSection = document.getElementById("temoignages");
 
+
         // creer h2 et l'inserer dans la section
         let titleTem = document.createElement("h2");
+        titleTem.classList.add("titles");
         titleTem.textContent = "Temoignages";
         temoignagesSection.appendChild(titleTem);
 
@@ -127,5 +137,7 @@ fetch(jsonLink)
         // l'inserer dans la section
         temoignagesSection.appendChild(temoignagesContainer);
 
-
     })
+    .catch(error => console.error('Error 404', error));
+//**FIN FETCH */
+
