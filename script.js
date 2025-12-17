@@ -34,6 +34,7 @@ fetch(jsonLink)
 
         // Etape 3 : Faire la section avantages: cibler la section avantage, creer une div carte, faire un boucle avec forEach
         let avantageSection = document.getElementById("avantages");
+        // avantageSection.classList.add("avSection");
 
         // creer h2 et l'inserer dans la section
         let titleAv = document.createElement("h2");
@@ -114,6 +115,7 @@ fetch(jsonLink)
         // faire un boucle forEach
         data.temoignages.forEach(elementTem => {
             let cardTem = document.createElement("div");
+            cardTem.classList.add("carteTem");
             temoignagesContainer.appendChild(cardTem);
 
             let titleCardTem = document.createElement("h3");
